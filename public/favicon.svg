@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none">
+  <path class="favicon-path" fill="transparent" d="M0 0h48v48H0z"/>
+  <path fill="url(#a)" d="M5.04 12.448h16.064v4.48H9.68v5.024h10.112v4.48H9.68v5.088h11.872V36H5.04V12.448ZM23.697 36 34.32 11.52h.256L45.2 36h-5.376l-6.783-17.216 3.36-2.304L28.272 36h-4.575Zm7.264-8.512h7.072l1.631 3.904H29.52l1.44-3.904Z"/>
+  <defs>
+    <linearGradient id="a" x1="2" x2="46" y1="28.5" y2="28.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C92591"/>
+      <stop offset="1" stop-color="#E0723F"/>
+    </linearGradient>
+  </defs>
+</svg>
