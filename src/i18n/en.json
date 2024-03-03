@@ -24,5 +24,31 @@
   "skills": {
     "title": "Skills",
     "description": "These are the technologies I work with:"
+  },
+  "projects": {
+    "description": "Here you can see some of the projects I have worked on:",
+    "buttonRepository": "See Repository",
+    "buttonWebsite": "Visit Website",
+    "buttonApp": "Download the app",
+    "gamingHub": {
+      "description": "An e-commerce for selling digital videogames. Built with React, Redux, Express, PostgreSQL, Sequelize, Firebase, and Passport.",
+      "ariaWebsite": "Visit GamingHub's website",
+      "ariaRepository": "See GamingHub's repository"
+    },
+    "quizMeApp": {
+      "description": "Mobile app where you can answer quizzes from a variety of categories. Built with React Native, MongoDB, and GraphQL. The admin dashboard was made using Next.js and TypeScript.",
+      "ariaWebsite": "Download the QuizMeApp mobile app",
+      "ariaRepository": "See QuizMeApp's repository"
+    },
+    "whiteboard": {
+      "description": "A simple drawing app created in order to learn and practice the usage of HTML Canvas. Made with HTML, CSS and vanilla Javascript.",
+      "ariaWebsite": "Visit Whiteboard's website",
+      "ariaRepository": "See Whiteboard's repository"
+    },
+    "movye": {
+      "description": "Web app where you can search for a movie and see its information, add it to your favorites or your watchlist. Made using Next.js.",
+      "ariaWebsite": "Visit Movye's website",
+      "ariaRepository": "See Movye's repository"
+    }
   }
 }

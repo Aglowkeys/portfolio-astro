@@ -1,0 +1,113 @@
+---
+import Container from "@/components/Container.astro";
+import H2 from "@/components/H2.astro";
+import Project from "@/components/Project.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale = "es" } = Astro;
+const { projects } = getI18N({ currentLocale });
+
+const PROJECT_LIST = [
+  {
+    title: "GamingHub",
+    desc: projects.gamingHub.description,
+    imageSrc: "/img/GamingHub.webp",
+    websiteLink: "https://ecommerce-ft07-g07.vercel.app",
+    websiteLinkLabel: projects.gamingHub.ariaWebsite,
+    websiteLinkText: projects.buttonWebsite,
+    githubLink: "https://github.com/Aglowkeys/GamingHub",
+    githubLinkLabel: projects.gamingHub.ariaRepository,
+    githubLinkText: projects.buttonRepository,
+  },
+  {
+    title: "QuizMeApp",
+    desc: projects.quizMeApp.description,
+    imageSrc: "/img/QuizMeApp.webp",
+    websiteLink: "https://appgallery.huawei.com/#/app/C103845919",
+    websiteLinkLabel: projects.quizMeApp.ariaWebsite,
+    websiteLinkText: projects.buttonWebsite,
+    githubLink: "https://github.com/Aglowkeys/QuizmeApp",
+    githubLinkLabel: projects.quizMeApp.ariaRepository,
+    githubLinkText: projects.buttonRepository,
+  },
+  {
+    title: "Movye",
+    desc: projects.movye.description,
+    imageSrc: "/img/Movye.webp",
+    websiteLink: "https://movye.vercel.app",
+    websiteLinkLabel: projects.movye.ariaWebsite,
+    websiteLinkText: projects.buttonWebsite,
+    githubLink: "https://github.com/SantiagoMartinMolina/Movye",
+    githubLinkLabel: projects.movye.ariaRepository,
+    githubLinkText: projects.buttonRepository,
+  },
+  {
+    title: "Whiteboard",
+    desc: projects.whiteboard.description,
+    imageSrc: "/img/Whiteboard.webp",
+    websiteLink: "https://whiteboard-pi.vercel.app",
+    websiteLinkLabel: projects.whiteboard.ariaWebsite,
+    websiteLinkText: projects.buttonWebsite,
+    githubLink: "https://github.com/Aglowkeys/whiteboard",
+    githubLinkLabel: projects.whiteboard.ariaRepository,
+    githubLinkText: projects.buttonRepository,
+  },
+];
+---
+
+<section aria-labelledby="projects-title" id="portfolio">
+  <Container>
+    <div class="flex-wrapper">
+      <div class="projects__header">
+        <H2 id="projects-title" class="alternative">Portfolio</H2>
+        <p>{projects.description}</p>
+      </div>
+
+      <div class="projects__list">
+        {PROJECT_LIST.map((project) => <Project {...project} />)}
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  section {
+    padding: 7em 0 3em;
+
+    h2 {
+      color: var(--primary-100);
+    }
+
+    .projects__header {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 8em;
+      align-self: flex-start;
+      width: auto;
+      padding-right: 4em;
+      margin-bottom: 4em;
+
+      @media (max-width: 800px) {
+        position: static;
+      }
+    }
+
+    .flex-wrapper {
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: 800px) {
+        flex-direction: column;
+      }
+
+      & > div {
+        flex: 1 1 50%;
+      }
+    }
+
+    .projects__list {
+      z-index: 10;
+      background-color: var(--dark);
+    }
+  }
+</style>
