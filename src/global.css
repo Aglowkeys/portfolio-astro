@@ -31,6 +31,9 @@
   --font-body: "Geist", "Inter", "Open Sans", Arial, sans-serif;
   --font-heading: "Josefin Sans", "Geist", "Inter", "Open Sans", Arial,
     sans-serif;
+
+  --font-weight-body: 600;
+  --font-weight-heading: 600;
 }
 
 ::selection {
@@ -48,7 +51,7 @@ textarea::selection {
 html,
 body {
   font-family: var(--font-body);
-  font-weight: 500;
+  font-weight: var(--font-weight-body);
   font-size: 100%;
   background-color: var(--dark);
   color: var(--light);
@@ -99,7 +102,6 @@ textarea {
   background: var(--light);
   border: 4px solid var(--primary-100);
   padding: 0.5em 1em;
-  font-weight: 600;
   outline: 0;
   filter: none;
 }
@@ -130,7 +132,6 @@ label {
 
 p {
   line-height: 1.5;
-  font-weight: 600;
 }
 
 p.small {
@@ -141,7 +142,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: var(--font-weight-heading);
   text-transform: uppercase;
 }
 
