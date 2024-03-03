@@ -1,0 +1,48 @@
+---
+import SkillCard from "@/components/SkillCard.astro";
+import CSS from "@/components/skills/CSS.astro?raw";
+import Express from "@/components/skills/Express.astro?raw";
+import HTML from "@/components/skills/HTML.astro?raw";
+import JavaScript from "@/components/skills/JavaScript.astro?raw";
+import NextJS from "@/components/skills/NextJS.astro?raw";
+import NodeJS from "@/components/skills/NodeJS.astro?raw";
+import PostgreSQL from "@/components/skills/PostgreSQL.astro?raw";
+import React from "@/components/skills/React.astro?raw";
+import Redux from "@/components/skills/Redux.astro?raw";
+import Sass from "@/components/skills/Sass.astro?raw";
+import TypeScript from "@/components/skills/TypeScript.astro?raw";
+import AstroLogo from "@/components/skills/Astro.astro?raw";
+import Vitest from "@/components/skills/Vitest.astro?raw";
+import Jest from "@/components/skills/Jest.astro?raw";
+import Cypress from "@/components/skills/Cypress.astro?raw";
+
+const SKILLS = [
+  { text: "HTML", icon: HTML },
+  { text: "CSS", icon: CSS },
+  { text: "JavaScript", icon: JavaScript },
+  { text: "TypeScript", icon: TypeScript },
+  { text: "React", icon: React },
+  { text: "Redux", icon: Redux },
+  { text: "Node.js", icon: NodeJS },
+  { text: "Express", icon: Express },
+  { text: "PostgreSQL", icon: PostgreSQL },
+  { text: "Sass", icon: Sass },
+  { text: "Next.js", icon: NextJS },
+  { text: "Astro", icon: AstroLogo },
+  { text: "Vitest", icon: Vitest },
+  { text: "Jest", icon: Jest },
+  { text: "Cypress", icon: Cypress },
+];
+---
+
+<div class="skills-container">
+  {SKILLS.map(({ icon, text }) => <SkillCard text={text} icon={icon} />)}
+</div>
+
+<style>
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>

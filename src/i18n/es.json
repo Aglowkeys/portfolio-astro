@@ -20,5 +20,9 @@
     "title": "Sobre mí",
     "description": "Desarrollador fullstack, docente de música, amante del Front-end. Realicé un bootcamp de más de 700 hs. de estudio intensivo que me preparó para desempeñarme como desarrollador web, ideando proyectos reales y complejos, además de potenciar mis habilidades interpersonales y haberme permitido ser mentor de estudiantes principiantes.",
     "seeProjects": "Ver mis proyectos"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "description": "Estas son las tecnologías con las cuales me manejo:"
   }
 }
