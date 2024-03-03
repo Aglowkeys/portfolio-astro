@@ -53,5 +53,8 @@
   },
   "footer": {
     "listLabel": "Enlaces a mis redes sociales"
+  },
+  "arrowTop": {
+    "label": "Volver arriba"
   }
 }

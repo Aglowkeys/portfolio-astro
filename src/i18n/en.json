@@ -53,5 +53,8 @@
   },
   "footer": {
     "listLabel": "Social network links"
+  },
+  "arrowTop": {
+    "label": "Scroll back to top"
   }
 }
