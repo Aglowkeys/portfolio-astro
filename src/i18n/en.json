@@ -7,7 +7,7 @@
     "skills": "Skills",
     "portfolio": "Portfolio",
     "contact": "Contact",
-    "lang": "EN",
+    "lang": "ES",
     "ariaLabel": "Change language to Spanish",
     "skipContent": "Skip navigation"
   },
@@ -15,5 +15,10 @@
     "description": "I am a web developer who focuses on the small details, and on simple, accessible and adaptable designs.",
     "downloadCV": "Download Resume",
     "cvLink": "/pdf/Emiliano_Alfonso_en.pdf"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Fullstack developer, music teacher, Front-end lover. I attended a bootcamp with more than 700 hours of intensive learning that prepared me to work as a web developer, creating projects that were both real and complex. Furthermore, the bootcamp greatly improved my interpersonal skills and gave me the opportunity of teaching to beginner students.",
+    "seeProjects": "See my projects"
   }
 }

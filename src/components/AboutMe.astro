@@ -1,0 +1,55 @@
+---
+import Container from "@/components/Container.astro";
+import ButtonLink from "@/components/ButtonLink.astro";
+import H2 from "@/components/H2.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale = "es" } = Astro;
+const { about } = getI18N({ currentLocale });
+---
+
+<section aria-labelledby="about-title">
+  <Container>
+    <H2 id="about-title">{about.title}</H2>
+    <p>{about.description}</p>
+    <ButtonLink href="#portfolio" class="alternative">
+      {about.seeProjects}
+    </ButtonLink>
+  </Container>
+</section>
+
+<style>
+  section {
+    background: var(--primary-200);
+    margin-top: -3em;
+    padding: 5em 0;
+    clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
+    position: relative;
+    z-index: 10;
+
+    @media (max-width: 550px) {
+      margin-top: 0;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  p {
+    max-width: 50ch;
+    margin: 0 auto;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 2em;
+  }
+</style>

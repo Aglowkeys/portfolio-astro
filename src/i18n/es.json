@@ -7,7 +7,7 @@
     "skills": "Habilidades",
     "portfolio": "Portfolio",
     "contact": "Contacto",
-    "lang": "ES",
+    "lang": "EN",
     "ariaLabel": "Cambiar idioma a inglés",
     "skipContent": "Saltar navegación"
   },
@@ -15,5 +15,10 @@
     "description": "Soy un desarrollador web que hace foco en el detalle, los diseños simples, accesibles y adaptables.",
     "downloadCV": "Descargar CV",
     "cvLink": "/pdf/Emiliano_Alfonso_es.pdf"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "Desarrollador fullstack, docente de música, amante del Front-end. Realicé un bootcamp de más de 700 hs. de estudio intensivo que me preparó para desempeñarme como desarrollador web, ideando proyectos reales y complejos, además de potenciar mis habilidades interpersonales y haberme permitido ser mentor de estudiantes principiantes.",
+    "seeProjects": "Ver mis proyectos"
   }
 }
