@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Emiliano Alfonso - Desarrollador web fullstack",
+    "description": "Explora mi portafolio con proyectos front-end y full-stack creados con tecnologías como React, Redux y Express. Encontrarás también mi currículum e información de contacto."
+  },
+  "navbar": {
+    "skills": "Habilidades",
+    "portfolio": "Portfolio",
+    "contact": "Contacto",
+    "lang": "ES",
+    "ariaLabel": "Cambiar idioma a inglés",
+    "skipContent": "Saltar navegación"
+  }
+}
