@@ -1,0 +1,103 @@
+---
+import ButtonLink from "@/components/ButtonLink.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale = "es" } = Astro;
+const { hero } = getI18N({ currentLocale });
+---
+
+<div id="hero" class="hero">
+  <div class="hero__info">
+    <h1>Emiliano Alfonso</h1>
+    <p class="hero__tagline">{hero.description}</p>
+    <ButtonLink href={hero.cvLink}>{hero.downloadCV}</ButtonLink>
+  </div>
+  <img src="/img/emiliano.webp" alt="Emiliano Alfonso" aria-hidden="true" />
+</div>
+
+<style>
+  .hero {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: min-content;
+    flex: 1;
+    position: relative;
+
+    .hero__info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10rem;
+      width: 70%;
+      z-index: 10;
+      flex-grow: 0;
+      align-items: flex-start;
+
+      @media (max-width: 600px) {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+
+        .hero__tagline {
+          font-size: var(--body-sm);
+        }
+      }
+    }
+
+    .hero__tagline {
+      max-width: 30ch;
+      margin-bottom: 2em;
+      text-shadow:
+        -1px -1px 0 var(--dark),
+        1px -1px 0 var(--dark),
+        -1px 1px 0 var(--dark),
+        1px 1px 0 var(--dark);
+    }
+  }
+  h1 {
+    font-size: var(--h-lg);
+    color: var(--primary-200);
+    line-height: 1;
+    letter-spacing: -0.075em;
+    max-width: 8ch;
+    transition: font-size 200ms;
+
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+      color: transparent;
+      background-image: linear-gradient(
+        90deg,
+        var(--primary-200),
+        var(--secondary)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+
+      /* Para arreglar bug con Safari. Parece que no le gustan las etiquetas dentro de h1 */
+      -webkit-mask-image: linear-gradient(
+        90deg,
+        var(--primary-200),
+        var(--secondary)
+      );
+    }
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    right: 0;
+    bottom: -7em;
+    z-index: 5;
+
+    @media (max-width: 1000px) {
+      bottom: -7em;
+      max-width: 55%;
+    }
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+</style>

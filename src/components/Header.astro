@@ -1,0 +1,23 @@
+---
+import Hero from "@/components/Hero.astro";
+import Navbar from "@/components/Navbar.astro";
+---
+
+<header>
+  <Navbar />
+  <Hero />
+</header>
+
+<style>
+  header {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    @media (max-width: 600px) {
+      min-height: 80vh;
+    }
+  }
+</style>
