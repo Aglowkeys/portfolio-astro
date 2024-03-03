@@ -50,5 +50,8 @@
       "ariaWebsite": "Visit Movye's website",
       "ariaRepository": "See Movye's repository"
     }
+  },
+  "footer": {
+    "listLabel": "Social network links"
   }
 }

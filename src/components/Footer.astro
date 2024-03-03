@@ -1,0 +1,154 @@
+---
+import Container from "@/components/Container.astro";
+import GitHub from "@/components/svg/GitHub.astro?raw";
+import LinkedIn from "@/components/svg/LinkedIn.astro?raw";
+import { getI18N } from "@/i18n";
+
+const { currentLocale = "es" } = Astro;
+const { footer } = getI18N({ currentLocale });
+
+const SOCIAL_LINKS = [
+  {
+    href: "https://github.com/Aglowkeys",
+    label: "GitHub",
+    icon: GitHub,
+  },
+  {
+    href: "https://www.linkedin.com/in/emiliano-alfonso",
+    label: "LinkedIn",
+    icon: LinkedIn,
+  },
+];
+---
+
+<footer>
+  <Container>
+    <div class="flex-wrapper">
+      <div class="footer__icons">
+        {
+          /*
+           * The next line is needed in order to restore the semantic meaning of list to the <ul>.
+           * Since "list-style: none" was applied via CSS, Apple's VoiceOver does not announce it as a list anymore.
+           */
+        }
+        {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
+        <ul role="list" aria-label={footer.listLabel}>
+          {
+            SOCIAL_LINKS.map(({ label, href, icon }) => (
+              <li>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                >
+                  <Fragment set:html={icon} />
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <p class="footer__mail">
+        <a href="mailto:emilianoalfonso1989@gmail.com">
+          emilianoalfonso1989@gmail.com
+        </a>
+      </p>
+    </div>
+  </Container>
+</footer>
+
+<style>
+  footer {
+    padding: 3em 0;
+    position: relative;
+
+    a {
+      color: currentColor;
+    }
+
+    a:hover {
+      color: var(--primary-100);
+    }
+
+    &::before {
+      content: "";
+      height: 5px;
+      background-image: linear-gradient(
+        45deg,
+        var(--primary-100),
+        var(--secondary)
+      );
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .flex-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: 700px) {
+        flex-direction: column;
+      }
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      @media (max-width: 700px) {
+        margin-bottom: 1em;
+      }
+
+      li:last-child {
+        margin-left: 2em;
+      }
+
+      a {
+        display: inline-block;
+      }
+
+      a:focus {
+        outline: 4px dotted var(--primary-100);
+        outline-offset: 0.5em;
+      }
+    }
+
+    .footer__mail a {
+      text-decoration: none;
+      position: relative;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        color: var(--primary-100);
+      }
+
+      @media (max-width: 550px) {
+        font-size: var(--body-sm);
+      }
+
+      &:hover::before,
+      &:focus::before {
+        content: "";
+        height: 5px;
+        background-image: linear-gradient(
+          45deg,
+          var(--primary-100),
+          var(--secondary)
+        );
+        position: absolute;
+        bottom: -0.5em;
+        left: 0;
+        right: 0;
+
+        @media (max-width: 550px) {
+          height: 3px;
+        }
+      }
+    }
+  }
+</style>
