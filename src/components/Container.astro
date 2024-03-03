@@ -1,4 +1,12 @@
-<div class="container">
+---
+type Props = {
+  centered?: boolean;
+};
+
+const { centered } = Astro.props;
+---
+
+<div class:list={["container", { centered }]}>
   <slot />
 </div>
 
@@ -7,5 +15,11 @@
     width: 80%;
     max-width: 75rem;
     margin: 0 auto;
+  }
+
+  .centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 </style>

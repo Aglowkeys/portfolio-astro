@@ -9,7 +9,7 @@ const { about } = getI18N({ currentLocale });
 ---
 
 <section aria-labelledby="about-title">
-  <Container>
+  <Container centered>
     <H2 id="about-title">{about.title}</H2>
     <p>{about.description}</p>
     <ButtonLink href="#portfolio" class="alternative">
@@ -32,24 +32,12 @@ const { about } = getI18N({ currentLocale });
     }
   }
 
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   h2 {
-    text-align: center;
     margin-top: 1em;
   }
 
   p {
     max-width: 50ch;
-    margin: 0 auto;
-  }
-
-  a {
-    display: inline-block;
-    margin-top: 2em;
+    margin: 0 auto 2em;
   }
 </style>
