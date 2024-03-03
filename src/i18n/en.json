@@ -10,5 +10,10 @@
     "lang": "EN",
     "ariaLabel": "Change language to Spanish",
     "skipContent": "Skip navigation"
+  },
+  "hero": {
+    "description": "I am a web developer who focuses on the small details, and on simple, accessible and adaptable designs.",
+    "downloadCV": "Download Resume",
+    "cvLink": "/pdf/Emiliano_Alfonso_en.pdf"
   }
 }
