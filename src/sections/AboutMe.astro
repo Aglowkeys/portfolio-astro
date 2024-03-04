@@ -8,7 +8,7 @@ const { currentLocale = "es" } = Astro;
 const { about } = getI18N({ currentLocale });
 ---
 
-<section aria-labelledby="about-title">
+<section id="about" aria-labelledby="about-title">
   <Container centered>
     <H2 id="about-title">{about.title}</H2>
     <p>{about.description}</p>
