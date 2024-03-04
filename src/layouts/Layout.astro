@@ -4,17 +4,34 @@ import { getI18N } from "@/i18n";
 import "@/global.css";
 
 const { currentLocale = "es" } = Astro;
-const wordings = getI18N({ currentLocale });
+const { meta } = getI18N({ currentLocale });
 ---
 
 <!doctype html>
 <html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={wordings.meta.description} />
+    <meta name="description" content={meta.description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{wordings.meta.title}</title>
+
+    <meta property="og:url" content="https://portfolio-astro-jet.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:image" content="https://i.imgur.com/x4xjPNf.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="portfolio-astro-jet.vercel.app" />
+    <meta
+      property="twitter:url"
+      content="https://portfolio-astro-jet.vercel.app/"
+    />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
+    <meta name="twitter:image" content="https://i.imgur.com/x4xjPNf.png" />
+
+    <title>{meta.title}</title>
     <ViewTransitions />
   </head>
 
