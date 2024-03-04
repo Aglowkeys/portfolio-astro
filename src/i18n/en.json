@@ -6,7 +6,7 @@
   "navbar": {
     "skills": "Skills",
     "portfolio": "Portfolio",
-    "contact": "Contact",
+    "about": "About me",
     "lang": "ES",
     "ariaLabel": "Change language to Spanish",
     "skipContent": "Skip navigation"
@@ -26,29 +26,29 @@
     "description": "These are the technologies I work with:"
   },
   "projects": {
-    "description": "Here you can see some of the projects I have worked on:",
-    "buttonRepository": "See Repository",
+    "description": "Here are some of the projects I've worked on:",
+    "buttonRepository": "View Repository",
     "buttonWebsite": "Visit Website",
     "buttonApp": "Download the app",
     "gamingHub": {
-      "description": "An e-commerce for selling digital videogames. Built with React, Redux, Express, PostgreSQL, Sequelize, Firebase, and Passport.",
+      "description": "An e-commerce platform designed for selling digital video games. Developed with React, Redux, Express, PostgreSQL, Sequelize, Firebase, and Passport.",
       "ariaWebsite": "Visit GamingHub's website",
-      "ariaRepository": "See GamingHub's repository"
+      "ariaRepository": "View GamingHub's repository"
     },
     "quizMeApp": {
-      "description": "Mobile app where you can answer quizzes from a variety of categories. Built with React Native, MongoDB, and GraphQL. The admin dashboard was made using Next.js and TypeScript.",
+      "description": "A mobile app allowing users to answer quizzes from various categories, built with React Native, MongoDB, and GraphQL. The admin dashboard was created using Next.js and TypeScript.",
       "ariaWebsite": "Download the QuizMeApp mobile app",
-      "ariaRepository": "See QuizMeApp's repository"
+      "ariaRepository": "View QuizMeApp's repository"
     },
     "whiteboard": {
-      "description": "A simple drawing app created in order to learn and practice the usage of HTML Canvas. Made with HTML, CSS and vanilla Javascript.",
+      "description": "A simple drawing app created to learn and practice using HTML Canvas. Developed with HTML, CSS, and vanilla JavaScript.",
       "ariaWebsite": "Visit Whiteboard's website",
-      "ariaRepository": "See Whiteboard's repository"
+      "ariaRepository": "View Whiteboard's repository"
     },
     "movye": {
-      "description": "Web app where you can search for a movie and see its information, add it to your favorites or your watchlist. Made using Next.js.",
+      "description": "A web app where you can search for a movie, view its information, and add it to your favorites or watchlist. Developed using Next.js.",
       "ariaWebsite": "Visit Movye's website",
-      "ariaRepository": "See Movye's repository"
+      "ariaRepository": "View Movye's repository"
     }
   },
   "footer": {
