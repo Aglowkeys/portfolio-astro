@@ -19,23 +19,22 @@ const { arrowTop } = getI18N({ currentLocale });
 </button>
 
 <script>
-  const button = document.getElementById("scroll-button");
+  const setupArrowTopBehavior = () => {
+    const button = document.getElementById("scroll-button");
 
-  const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    const nav = document.querySelector("nav")!;
-    nav.focus();
+    button?.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      const nav = document.querySelector("nav")!;
+      nav.focus();
+    });
+
+    window.addEventListener("scroll", () => {
+      button?.classList.toggle("visible", window.scrollY > 400);
+    });
   };
 
-  button?.addEventListener("click", scrollTop);
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 400) {
-      button?.classList.add("visible");
-    } else {
-      button?.classList.remove("visible");
-    }
-  });
+  document.addEventListener("astro:after-swap", setupArrowTopBehavior);
+  setupArrowTopBehavior();
 </script>
 
 <style>
