@@ -29,7 +29,7 @@ const { arrowTop } = getI18N({ currentLocale });
 
   button?.addEventListener("click", scrollTop);
 
-  window.addEventListener("scroll", (ev) => {
+  window.addEventListener("scroll", () => {
     if (window.scrollY > 400) {
       button?.classList.add("visible");
     } else {
