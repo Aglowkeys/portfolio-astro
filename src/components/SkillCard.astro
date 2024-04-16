@@ -8,39 +8,32 @@ const { icon, text } = Astro.props;
 ---
 
 <article>
-  <Fragment set:html={icon} />
+  <div class="icon-container">
+    <Fragment set:html={icon} />
+  </div>
   <p>{text}</p>
 </article>
 
 <style>
   article {
     cursor: default;
-    box-sizing: content-box;
-    padding: 2em;
-    width: 7rem;
+    width: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: all 0.3s ease;
-    position: relative;
 
     @media (max-width: 700px) {
       width: 5rem;
-      padding: 1.25em;
-    }
-
-    &:hover {
-      background: var(--light);
-      transform: scale(1.1);
-      box-shadow: 5px 5px 0px var(--primary-200);
-      color: var(--dark);
     }
   }
 
+  .icon-container {
+    width: 75px;
+  }
+
   p {
-    margin-top: 2em;
     font-size: var(--body-sm);
     text-align: center;
-    line-height: 0;
+    margin-top: 0.75rem;
   }
 </style>
