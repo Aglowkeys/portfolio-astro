@@ -1,7 +1,5 @@
 ---
 import Container from "@/components/Container.astro";
-import GitHub from "@/components/svg/GitHub.astro?raw";
-import LinkedIn from "@/components/svg/LinkedIn.astro?raw";
 import { getI18N } from "@/i18n";
 
 const { currentLocale = "es" } = Astro;
@@ -11,12 +9,10 @@ const SOCIAL_LINKS = [
   {
     href: "https://github.com/Aglowkeys",
     label: "GitHub",
-    icon: GitHub,
   },
   {
     href: "https://www.linkedin.com/in/emiliano-alfonso",
     label: "LinkedIn",
-    icon: LinkedIn,
   },
 ];
 ---
@@ -34,15 +30,10 @@ const SOCIAL_LINKS = [
         {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
         <ul role="list" aria-label={footer.listLabel}>
           {
-            SOCIAL_LINKS.map(({ label, href, icon }) => (
+            SOCIAL_LINKS.map(({ label, href }) => (
               <li>
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                >
-                  <Fragment set:html={icon} />
+                <a href={href} target="_blank" rel="noopener noreferrer">
+                  {label}
                 </a>
               </li>
             ))
