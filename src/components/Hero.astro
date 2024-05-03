@@ -12,7 +12,12 @@ const { hero } = getI18N({ currentLocale });
     <p class="hero__tagline">{hero.description}</p>
     <ButtonLink href={hero.cvLink}>{hero.downloadCV}</ButtonLink>
   </div>
-  <img src="/img/emiliano.webp" alt="Emiliano Alfonso" aria-hidden="true" />
+  <img
+    src="/img/emiliano.webp"
+    alt="Emiliano Alfonso"
+    aria-hidden="true"
+    loading="lazy"
+  />
 </div>
 
 <style>
@@ -40,12 +45,14 @@ const { hero } = getI18N({ currentLocale });
         text-align: center;
 
         .hero__tagline {
+          margin-top: 0.5em;
           font-size: var(--body-sm);
         }
       }
     }
 
     .hero__tagline {
+      text-wrap: pretty;
       max-width: 35ch;
       margin-bottom: 2em;
       text-shadow:
@@ -55,6 +62,7 @@ const { hero } = getI18N({ currentLocale });
         1px 1px 0 var(--dark);
     }
   }
+
   h1 {
     font-size: var(--h-lg);
     color: var(--primary-200);
@@ -81,6 +89,7 @@ const { hero } = getI18N({ currentLocale });
       );
     }
   }
+
   img {
     max-width: 100%;
     max-height: 100%;
